@@ -74,15 +74,16 @@ public class Student {
         Scanner input = new Scanner(System.in);
         int amountToPay = input.nextInt();
         tuitionBalance -= amountToPay;
-        System.out.println("Your balance is: $" + tuitionBalance);
+        System.out.println("Thank you for your payment of $" + amountToPay);
+        viewBalance();
     }
 
     // show student status
     public void showStudentInfo() throws InterruptedException {
-        System.out.println("\nFirst Name: " + this.firstName);
-        System.out.println("Last Name: " + this.lastName);
+        System.out.println("\nName: " + this.firstName + " " + this.lastName);
         System.out.println("Grade Level: " + this.gradeLevel);
         System.out.println("Student ID: " + this.studentId);
+        System.out.println("Courses: " + this.courses);
         System.out.println("Tuition Balance: " + this.tuitionBalance + "\n");
         Thread.sleep(2000);
     }
